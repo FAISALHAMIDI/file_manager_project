@@ -1,0 +1,29 @@
+import sys
+import datetime
+
+def help():
+    sa = "Usage :-\n"
+    sa += "$ ./todo add 'todo item' # Add a new todo\n"
+    sa += "$ ./todo ls # Show remaining todos\n"
+    sa += "$ ./todo del <todo_number> # Delete a todo\n"
+    sa += "$ ./todo done <todo_number> # Complete a todo\n"
+    sa += "$ ./todo help # Show usage\n"
+    sa += "$ ./todo report # Statistics\n"
+    sys.stdout.buffer.write(sa.encode('utf8'))
+
+def add(s):
+    f = open('todo.txt', 'a')
+    f.write(s)
+    f.write("\n")
+    f.close()
+    s = "Added todo: " + s
+    print(s)
+
+def ls():
+    try:
+        nec()
+        l = len(d)
+        k = l
+        for i in d:
+            # code to print the todo list
+            pass
